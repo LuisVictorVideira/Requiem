@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hub Site</title>
+
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="home.css">
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <p><a href="prototipo.html">
+        <img src="../imagens/requiem.logo.png" alt="Requiem logo">
+        </a></p>
+    <h1>Projeto Requiem</h1>
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div id="menu" class="menu">
+        <a href="fansubs.html">Fansub</a>
+        <a href="Scanlators.html">Scanlator</a>
+        <a href="../contato/contato.html">Contate-me</a>
+
+    </div>
+</header>
+
+<div class="container">
+    <div class="content">
+        <div class="content-container">
+            <div class="lorem">
+                <h2>Topico</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod, neque eget mollis dapibus, felis sem elementum est, sed consectetur odio purus a libero. Integer facilisis nunc id sem consequat, nec mollis orci aliquet.</p>
+                <p>Fusce scelerisque, arcu in vehicula cursus, lorem turpis interdum ipsum, at aliquam ligula erat sit amet justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+            </div>
+        </div>
+
+        <div class="fansubsidebar">
+            <aside class="sidebar">
+                <h3>Fansubs</h3>
+                <a href="/fansub/KNK.html">Moshi Moshi</a>
+                <a href="/fansub/KNK.html">KnK</a>
+            </aside>
+
+            <aside class="sidebar">
+                <h3>Scans</h3>
+                <a href="/scanlator/animaregia.html">Animaregia</a>
+                <a href="/scanlator/neox.html">Neox</a>
+                <a href="/scanlator/phantom.html">Phantom</a>
+                <a href="/scanlator/mode.html">Mode</a>
+            </aside>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

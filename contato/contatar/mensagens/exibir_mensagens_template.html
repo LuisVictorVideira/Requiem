@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagens Recebidas</title>
+    <!-- Link para o arquivo CSS -->
+    <link rel="stylesheet" href="exibir_mensagens.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h2>Mensagens Recebidas</h2>
+        </header>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Mensagem</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{table_rows}}
+            </tbody>
+        </table>
+
+        <div class="logout-button">
+            <a href="logout.php">Sair</a>
+        </div>
+    </div>
+
+</body>
+</html>

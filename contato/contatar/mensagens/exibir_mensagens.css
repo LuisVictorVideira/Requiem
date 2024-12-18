@@ -1,0 +1,84 @@
+/* Resetando margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contêiner principal */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do cabeçalho */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #6200ea;
+}
+
+/* Estilo da tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #6200ea;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Estilo da mensagem de erro */
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Estilo do botão de logout */
+.logout-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.logout-button a {
+    background-color: #ff5722;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.logout-button a:hover {
+    background-color: #e64a19;
+}

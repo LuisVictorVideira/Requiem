@@ -3,7 +3,7 @@ session_start();
 
 // Verificar se o usuário está autenticado
 if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
-    header('Location: login.php');
+    header('Location: login.php'); // Redireciona para o login se não estiver autenticado
     exit;
 }
 
@@ -17,11 +17,11 @@ if (file_exists($file)) {
     foreach ($lines as $line) {
         // Dividir os dados pelo separador "|"
         $fields = explode('|', $line);
-        if (count($fields) === 3) { // Garantir que há 3 campos: Nome, Email, Assunto
+        if (count($fields) === 3) { // Garantir que há 3 campos: Nome, Email, Mensagem
             $name = htmlspecialchars($fields[0]);
             $email = htmlspecialchars($fields[1]);
-            $subject = htmlspecialchars($fields[2]);
-            $table_rows .= "<tr><td>{$name}</td><td>{$email}</td><td>{$subject}</td></tr>";
+            $message = htmlspecialchars($fields[2]);
+            $table_rows .= "<tr><td>{$name}</td><td>{$email}</td><td>{$message}</td></tr>";
         }
     }
 }
@@ -32,7 +32,7 @@ if (empty($table_rows)) {
 }
 
 // Carregar o template HTML
-$template = file_get_contents('logoutemplate.html');
+$template = file_get_contents('exibir_mensagens_template.html');
 
 // Substituir a tag {{table_rows}} pelo conteúdo dinâmico
 $output = str_replace('{{table_rows}}', $table_rows, $template);
