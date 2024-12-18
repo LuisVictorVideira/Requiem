@@ -7,8 +7,10 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
     exit;
 }
 
+
+
 // Caminho para o arquivo de mensagens
-$file = 'mensagens.txt';
+$file = __DIR__ . '/mensagens.txt';
 $table_rows = '';
 
 // Verificar se o arquivo existe e contém dados
@@ -32,11 +34,12 @@ if (empty($table_rows)) {
 }
 
 // Carregar o template HTML
-$template = file_get_contents('exibir_mensagens_template.html');
+$template = file_get_contents(__DIR__ . '/exibir_mensagens_template.html');
 
 // Substituir a tag {{table_rows}} pelo conteúdo dinâmico
 $output = str_replace('{{table_rows}}', $table_rows, $template);
 
 // Exibir a página completa
 echo $output;
+
 ?>

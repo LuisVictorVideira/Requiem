@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if ($username === $valid_username && password_verify($password, $hashed_password)) {
         $_SESSION['authenticated'] = true;
-        header('Location: ../contato/contatar/mensagens/exibir_mensagens.php');
+        header('Location: ../contatar/mensagens/exibir_mensagens.php');
         exit;
     } else {
         $error = "Usuário ou senha inválidos!";
