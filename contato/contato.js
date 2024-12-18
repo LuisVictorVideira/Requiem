@@ -13,8 +13,11 @@ document.getElementById("contactForm").addEventListener("submit", function(event
         if (data.success) {
             // Se o envio for bem-sucedido, redireciona o usuário para a página de contato
             alert("Mensagem enviada com sucesso!");
-            window.location.href = "/requiem/contato/contato.html"; // Caminho absoluto para o formulário
-        } else {
+            fetch("/requiem/contatar/submit_form.php", {
+                method: "POST",
+                body: formData
+            })
+                    } else {
             // Caso contrário, exibe a mensagem de erro
             alert("Erro: " + (data.message || "Houve um erro desconhecido. Tente novamente."));
         }

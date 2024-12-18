@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $data = "$name|$email|$subject\n";
 
     // Salvar os dados em um arquivo texto
-    $file = 'mensagens.txt'; // Nome do arquivo onde os dados serão armazenados
+    $file = __DIR__ . '/mensagens/mensagens.txt';
     if (file_put_contents($file, $data, FILE_APPEND)) {
         // Retorna um JSON de sucesso se os dados forem salvos com sucesso
         echo json_encode(['success' => true, 'message' => 'Mensagem salva com sucesso. Obrigado por entrar em contato!']);
