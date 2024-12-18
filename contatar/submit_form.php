@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $data = "Nome: $name\nEmail: $email\nAssunto: $subject\n---\n";
 
     // Salvar os dados em um arquivo texto
-    $file = 'contatar\mensagens.txt'; // Nome do arquivo onde os dados serão armazenados
+    $file = 'mensagens.txt'; // Nome do arquivo onde os dados serão armazenados
     if (file_put_contents($file, $data, FILE_APPEND)) {
         echo "<p style='color: green;'>Mensagem salva com sucesso. Obrigado por entrar em contato!</p>";
     } else {

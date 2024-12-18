@@ -32,7 +32,7 @@ if (empty($table_rows)) {
 }
 
 // Carregar o template HTML
-$template = file_get_contents('contatar\.htaccess');
+$template = file_get_contents('logoutemplate.html');
 
 // Substituir a tag {{table_rows}} pelo conteúdo dinâmico
 $output = str_replace('{{table_rows}}', $table_rows, $template);

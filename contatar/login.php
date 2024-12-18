@@ -3,7 +3,7 @@ session_start();
 
 // Verificar se o usuário já está logado
 if (isset($_SESSION['authenticated']) && $_SESSION['authenticated'] === true) {
-    header('Location: contatar\exibir_mensagens.php'); // Redireciona para a página protegida
+    header('Location: exibir_mensagens.php'); // Redireciona para a página protegida
     exit;
 }
 
@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if ($username === $valid_username && password_verify($password, $hashed_password)) {
         $_SESSION['authenticated'] = true;
-        header('Location: contatar\exibir_mensagens.php');
+        header('Location: exibir_mensagens.php');
         exit;
     } else {
         $error = "Usuário ou senha inválidos!";
